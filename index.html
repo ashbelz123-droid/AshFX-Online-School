@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <title>AshFX Online School</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">A</span><div><strong>AshFX</strong><small>ONLINE SCHOOL</small></div></div>
+      <div class="level-pill">LEVEL <b id="level">1</b></div>
+    </header>
+
+    <main>
+      <section class="welcome card">
+        <span class="eyebrow">FOREX TRAINING SIMULATOR</span>
+        <h1>Learn the market by <span>playing it.</span></h1>
+        <p>Start with the smallest building block of a chart: the candle. Watch it form, pause it, and learn what every movement means.</p>
+        <button class="primary" id="startBtn">START LEVEL 1 <span>→</span></button>
+      </section>
+
+      <section class="progress card">
+        <div class="section-head"><div><span class="eyebrow">YOUR JOURNEY</span><h2>Trader training</h2></div><strong id="xpText">0 / 100 XP</strong></div>
+        <div class="progress-track"><i id="xpBar"></i></div>
+        <div class="lesson-row"><span>01</span><div><b>How a candle is created</b><small>Open · High · Low · Close</small></div><em>LOCKED</em></div>
+        <div class="lesson-row muted"><span>02</span><div><b>Candle anatomy</b><small>Body · Wick · Direction</small></div><em>LOCKED</em></div>
+      </section>
+
+      <section class="chart-card card" id="lesson">
+        <div class="chart-head"><div><span class="eyebrow">LESSON 01</span><h2>Build a candle</h2></div><button class="icon-btn" id="resetBtn" aria-label="Reset lesson">↻</button></div>
+        <div class="symbol-row"><b>EUR/USD</b><span>5M</span><i id="marketState">SIMULATION</i></div>
+        <div class="chart-wrap"><canvas id="chart" aria-label="Interactive forex candlestick lesson"></canvas><div class="pause-note" id="pauseNote">Press START to begin</div></div>
+        <div class="teacher"><div class="teacher-avatar">👨‍🏫</div><div><span>ASHFX TEACHER</span><p id="teacherText">We start from zero. Watch how one candle is created from price movement.</p></div></div>
+        <div class="controls"><button id="playBtn" class="control primary">▶ PLAY</button><button id="stepBtn" class="control">NEXT CANDLE</button><button id="pauseBtn" class="control">Ⅱ PAUSE</button></div>
+      </section>
+    </main>
+    <nav class="bottom-nav"><button class="active">⌂<small>School</small></button><button>◫<small>Lessons</small></button><button>◉<small>Practice</small></button><button>♙<small>Profile</small></button></nav>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

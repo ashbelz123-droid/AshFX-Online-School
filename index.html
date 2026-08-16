@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#07111f">
   <title>AshFX Online School</title>
   <link rel="stylesheet" href="assets/css/app.css">
+  <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 </head>
 <body>
   <div class="app-shell">
@@ -15,46 +16,23 @@
     </header>
     <main>
       <section class="welcome card">
-        <span class="eyebrow">FOREX TRAINING SIMULATOR</span>
+        <span class="eyebrow">ASHFX MARKET REPLAY</span>
         <h1>Learn the market by <span>playing it.</span></h1>
-        <p>Study real market movement, then practice what you learn in our candle-by-candle training.</p>
+        <p>Our chart looks and behaves like a real trading chart, but lessons use historical market movement replayed candle-by-candle. No live orders.</p>
         <button class="primary" id="startBtn">START LEVEL 1 <span>→</span></button>
       </section>
 
-      <section class="chart-card card live-market">
-        <div class="chart-head"><div><span class="eyebrow">LIVE MARKET</span><h2>Real EUR/USD candles</h2></div><span class="live-dot">● LIVE</span></div>
-        <div class="symbol-row"><b>EUR/USD</b><span>5M</span><i>MARKET DATA</i></div>
-        <div class="tradingview-widget-container live-chart">
-          <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/EURUSD/" rel="noopener nofollow" target="_blank">EUR/USD chart</a> by TradingView</div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-          {
-            "allow_symbol_change": true,
-            "calendar": false,
-            "details": false,
-            "hide_side_toolbar": true,
-            "hide_top_toolbar": false,
-            "hide_legend": false,
-            "hide_volume": false,
-            "hotlist": false,
-            "interval": "5",
-            "locale": "en",
-            "save_image": false,
-            "style": "1",
-            "symbol": "FX:EURUSD",
-            "theme": "dark",
-            "timezone": "Etc/UTC",
-            "backgroundColor": "#07111f",
-            "gridColor": "rgba(36, 54, 72, 0.35)",
-            "watchlist": ["FX:EURUSD","FX:GBPUSD","FX:USDJPY","FX:USDCHF","FX:AUDUSD","FX:USDCAD"],
-            "withdateranges": false,
-            "compareSymbols": [],
-            "studies": [],
-            "autosize": true
-          }
-          </script>
+      <section class="chart-card card" id="marketCard">
+        <div class="chart-head"><div><span class="eyebrow">ASHFX CHART</span><h2>EUR/USD</h2></div><span class="data-badge" id="dataBadge">LOADING DATA</span></div>
+        <div class="market-toolbar">
+          <div class="pair-tabs"><button class="pair active" data-symbol="EURUSD">EUR/USD</button><button class="pair" data-symbol="GBPUSD">GBP/USD</button><button class="pair" data-symbol="USDJPY">USD/JPY</button></div>
+          <div class="timeframes"><button class="tf active" data-minutes="1">M1</button><button class="tf" data-minutes="5">M5</button><button class="tf" data-minutes="15">M15</button><button class="tf" data-minutes="60">H1</button><button class="tf" data-minutes="240">H4</button></div>
         </div>
-        <div class="live-note">Real market chart for observation. Training decisions will remain in demo/replay mode.</div>
+        <div class="price-strip"><strong id="lastPrice">—</strong><span id="priceChange">HISTORICAL REPLAY</span><span id="replayDate">—</span></div>
+        <div id="marketChart" class="market-chart" aria-label="AshFX historical forex candlestick chart"></div>
+        <div class="chart-tools"><button id="zoomOut">−</button><button id="zoomIn">+</button><button id="fitChart">FIT</button><button id="crosshairBtn">CROSSHAIR</button></div>
+        <div class="replay-bar"><button id="playBtn" class="control primary">▶ PLAY</button><button id="stepBtn" class="control">NEXT CANDLE</button><button id="pauseBtn" class="control">Ⅱ PAUSE</button><button id="resetBtn" class="control">↻ RESET</button></div>
+        <div class="live-note">Historical market data is replayed by AshFX. The chart itself is ours; there is no TradingView live embed and no real-money execution.</div>
       </section>
 
       <section class="progress card">
@@ -64,12 +42,8 @@
         <div class="lesson-row muted"><span>02</span><div><b>Candle anatomy</b><small>Body · Wick · Direction</small></div><em>LOCKED</em></div>
       </section>
 
-      <section class="chart-card card" id="lesson">
-        <div class="chart-head"><div><span class="eyebrow">LESSON 01</span><h2>Build a candle</h2></div><button class="icon-btn" id="resetBtn" aria-label="Reset lesson">↻</button></div>
-        <div class="symbol-row"><b>EUR/USD</b><span>5M</span><i id="marketState">SIMULATION</i></div>
-        <div class="chart-wrap"><canvas id="chart" aria-label="Interactive forex candlestick lesson"></canvas><div class="pause-note" id="pauseNote">Press START to begin</div></div>
-        <div class="teacher"><div class="teacher-avatar">👨‍🏫</div><div><span>ASHFX TEACHER</span><p id="teacherText">We start from zero. Watch how one candle is created from price movement.</p></div></div>
-        <div class="controls"><button id="playBtn" class="control primary">▶ PLAY</button><button id="stepBtn" class="control">NEXT CANDLE</button><button id="pauseBtn" class="control">Ⅱ PAUSE</button></div>
+      <section class="teacher card" id="teacher">
+        <div class="teacher-avatar">👨‍🏫</div><div><span>ASHFX TEACHER</span><p id="teacherText">We start from zero. Press START and watch real historical market candles appear one at a time.</p></div>
       </section>
     </main>
     <nav class="bottom-nav"><button class="active">⌂<small>School</small></button><button>◫<small>Lessons</small></button><button>◉<small>Practice</small></button><button>♙<small>Profile</small></button></nav>

@@ -1,37 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#07111f">
-  <title>AshFX Online School</title>
-  <link rel="stylesheet" href="assets/css/app.css">
-  <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#07111f"><meta name="description" content="AshFX Online School — practical forex education through market replay and decision training"><title>AshFX Online School</title>
+<link rel="stylesheet" href="assets/css/app.css"><script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 </head>
-<body>
-  <div class="app-shell">
-    <header class="topbar"><div class="brand"><span class="brand-mark">A</span><div><strong>AshFX</strong><small>ONLINE SCHOOL</small></div></div><div class="level-pill">LEVEL <b id="level">1</b></div></header>
-    <main>
-      <section class="welcome card"><span class="eyebrow">ASHFX MARKET REPLAY</span><h1>Learn the market by <span>playing it.</span></h1><p>Our chart looks and behaves like a real trading chart. Lessons use market-style OHLC movement replayed candle-by-candle so you learn by doing.</p><button class="primary" id="startBtn">START LEVEL 1 <span>→</span></button></section>
+<body><div class="app-shell">
+<header class="topbar"><div class="brand"><span class="brand-mark">A</span><div><strong>AshFX</strong><small>ONLINE SCHOOL</small></div></div><div class="top-actions"><span class="streak">🔥 0</span><div class="level-pill">LEVEL <b id="level">1</b></div></div></header>
+<main>
+<section class="hero card"><div class="hero-glow"></div><span class="eyebrow">THE ASHFX METHOD</span><h1>Don't memorize forex.<br><span>Experience it.</span></h1><p>A structured trading school that takes you from candle basics to independent market decisions through long, practical replay sessions.</p><div class="hero-stats"><div><b id="heroXp">0</b><small>XP EARNED</small></div><div><b>12</b><small>CORE LEVELS</small></div><div><b>∞</b><small>REPLAY PRACTICE</small></div></div><button class="primary hero-btn" id="startBtn">ENTER TRAINING <span>→</span></button></section>
 
-      <section class="chart-card card" id="marketCard">
-        <div class="chart-head"><div><span class="eyebrow">ASHFX CHART</span><h2 id="chartTitle">EUR/USD</h2></div><span class="data-badge" id="dataBadge">HISTORICAL REPLAY</span></div>
-        <div class="market-toolbar"><div class="pair-tabs"><button class="pair active" data-symbol="EURUSD">EUR/USD</button><button class="pair" data-symbol="GBPUSD">GBP/USD</button><button class="pair" data-symbol="USDJPY">USD/JPY</button><button class="pair" data-symbol="XAUUSD">GOLD</button></div><div class="timeframes"><button class="tf active" data-minutes="1">M1</button><button class="tf" data-minutes="5">M5</button><button class="tf" data-minutes="15">M15</button><button class="tf" data-minutes="60">H1</button><button class="tf" data-minutes="240">H4</button></div></div>
-        <div class="price-strip"><strong id="lastPrice">—</strong><span id="priceChange">HISTORICAL REPLAY</span><span id="replayDate">—</span></div>
-        <div id="marketChart" class="market-chart" aria-label="AshFX historical candlestick chart"></div>
-        <div class="chart-tools"><button id="zoomOut">−</button><button id="zoomIn">+</button><button id="fitChart">FIT</button><button id="crosshairBtn">CROSSHAIR</button></div>
-        <div class="replay-bar"><button id="playBtn" class="control primary">▶ PLAY</button><button id="stepBtn" class="control">NEXT CANDLE</button><button id="pauseBtn" class="control">Ⅱ PAUSE</button><button id="resetBtn" class="control">↻ RESET</button></div>
-        <div class="live-note">AshFX owns the chart and replay controls. Training is simulation only; no real-money execution.</div>
-      </section>
+<section class="section-title"><div><span class="eyebrow">TRAINING PATH</span><h2>Become a trader step by step</h2></div><span class="completion" id="completion">0%</span></section>
+<section class="academy-grid card">
+<div class="level-card active" data-level="1"><span class="level-no">01</span><div class="level-icon">🕯️</div><h3>Candle Foundations</h3><p>Open, High, Low, Close, body and wicks.</p><span class="status">START HERE</span></div>
+<div class="level-card locked" data-level="2"><span class="level-no">02</span><div class="level-icon">👁️</div><h3>Reading Price</h3><p>Direction, momentum, rejection and context.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="3"><span class="level-no">03</span><div class="level-icon">📐</div><h3>Chart Setup</h3><p>Timeframes, sessions, levels and clean charts.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="4"><span class="level-no">04</span><div class="level-icon">🧱</div><h3>Market Structure</h3><p>HH, HL, LH, LL, breaks and shifts.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="5"><span class="level-no">05</span><div class="level-icon">🎯</div><h3>Zones & Levels</h3><p>Support, resistance, supply, demand and reaction.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="6"><span class="level-no">06</span><div class="level-icon">🧭</div><h3>Trade Setup</h3><p>Bias, entry, stop, target, invalidation and risk.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="7"><span class="level-no">07</span><div class="level-icon">⏱️</div><h3>Sessions & Timing</h3><p>Asia, London, New York and overlap behavior.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="8"><span class="level-no">08</span><div class="level-icon">📰</div><h3>News & Volatility</h3><p>CPI, NFP, FOMC and when staying out wins.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="9"><span class="level-no">09</span><div class="level-icon">🥇</div><h3>Gold Masterclass</h3><p>XAU/USD behavior, volatility and structure.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="10"><span class="level-no">10</span><div class="level-icon">🧠</div><h3>Psychology</h3><p>Patience, discipline, loss control and routine.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="11"><span class="level-no">11</span><div class="level-icon">🎮</div><h3>Decision Arena</h3><p>No teacher prompts. You choose what happens next.</p><span class="status">LOCKED</span></div>
+<div class="level-card locked" data-level="12"><span class="level-no">12</span><div class="level-icon">🏆</div><h3>Trader Simulation</h3><p>Full sessions from analysis to trade review.</p><span class="status">LOCKED</span></div>
+</section>
 
-      <section class="lesson-feature card" id="nfpLesson"><div class="lesson-icon">🥇</div><div class="lesson-copy"><span class="eyebrow">SPECIAL PRACTICAL LESSON</span><h2>Gold on NFP Day</h2><p>Learn how a major U.S. employment release can create fast volatility in XAU/USD. You'll learn preparation, candle reaction, spread/volatility awareness, confirmation and when staying out is the correct decision.</p><div class="lesson-meta"><span>GOLD / XAUUSD</span><span>NFP EVENT</span><span>REPLAY</span></div><button id="nfpStart" class="lesson-btn">START NFP LESSON →</button></div></section>
+<section class="chart-card card" id="marketCard"><div class="chart-head"><div><span class="eyebrow">ASHFX CHART ENGINE</span><h2 id="chartTitle">EUR/USD</h2></div><span class="data-badge" id="dataBadge">REPLAY</span></div><div class="market-toolbar"><div class="pair-tabs"><button class="pair active" data-symbol="EURUSD">EUR/USD</button><button class="pair" data-symbol="GBPUSD">GBP/USD</button><button class="pair" data-symbol="USDJPY">USD/JPY</button><button class="pair" data-symbol="XAUUSD">GOLD</button></div><div class="timeframes"><button class="tf active" data-minutes="1">M1</button><button class="tf" data-minutes="5">M5</button><button class="tf" data-minutes="15">M15</button><button class="tf" data-minutes="60">H1</button><button class="tf" data-minutes="240">H4</button></div></div><div class="price-strip"><strong id="lastPrice">—</strong><span id="priceChange">REPLAY</span><span id="replayDate">—</span></div><div id="marketChart" class="market-chart"></div><div class="chart-tools"><button id="zoomOut">−</button><button id="zoomIn">+</button><button id="fitChart">FIT</button><button id="crosshairBtn">CROSSHAIR</button></div><div class="replay-bar"><button id="playBtn" class="control primary">▶ PLAY</button><button id="stepBtn" class="control">NEXT CANDLE</button><button id="pauseBtn" class="control">Ⅱ PAUSE</button><button id="resetBtn" class="control">↻ RESET</button></div><div class="live-note">Private AshFX market replay. No live orders and no real-money execution.</div></section>
 
-      <section class="progress card"><div class="section-head"><div><span class="eyebrow">YOUR JOURNEY</span><h2>Trader training</h2></div><strong id="xpText">0 / 100 XP</strong></div><div class="progress-track"><i id="xpBar"></i></div><div class="lesson-row"><span>01</span><div><b>How a candle is created</b><small>Open · High · Low · Close</small></div><em>READY</em></div><div class="lesson-row"><span>02</span><div><b>Candle anatomy</b><small>Body · Wick · Direction</small></div><em>LOCKED</em></div><div class="lesson-row"><span>03</span><div><b>Gold on NFP Day</b><small>News volatility · reaction · patience</small></div><em>LOCKED</em></div></section>
+<section class="teacher card"><div class="teacher-avatar">👨‍🏫</div><div class="teacher-main"><span>ASHFX TEACHER</span><p id="teacherText">We start from zero. Watch first, then explain what you see.</p></div><div class="teacher-mode">GUIDED</div></section>
 
-      <section class="teacher card" id="teacher"><div class="teacher-avatar">👨‍🏫</div><div><span>ASHFX TEACHER</span><p id="teacherText">We start from zero. Press START and watch the market replay candle by candle.</p></div></section>
-    </main>
-    <nav class="bottom-nav"><button class="active">⌂<small>School</small></button><button>◫<small>Lessons</small></button><button>◉<small>Practice</small></button><button>♙<small>Profile</small></button></nav>
-  </div>
-  <script src="assets/js/app.js"></script>
-</body>
-</html>
+<section class="setup card" id="setupLab"><div class="section-title compact"><div><span class="eyebrow">PRACTICAL LAB</span><h2>Set up your trading area</h2></div></div><div class="setup-grid"><button class="setup-item active" data-tool="pair"><b>01</b><span>Choose market</span><small>Pair / Gold</small></button><button class="setup-item" data-tool="timeframe"><b>02</b><span>Choose timeframe</span><small>Top-down analysis</small></button><button class="setup-item" data-tool="levels"><b>03</b><span>Mark levels</span><small>Structure & zones</small></button><button class="setup-item" data-tool="risk"><b>04</b><span>Define risk</span><small>Before entry</small></button></div><div class="lab-output" id="labOutput"><b>Teacher instruction</b><p>Select your market first. A clean chart is part of the trade plan.</p></div></section>
+
+<section class="lesson-feature card" id="nfpLesson"><div class="lesson-icon">🥇</div><div class="lesson-copy"><span class="eyebrow">SPECIAL PRACTICAL SCENARIO</span><h2>Gold on NFP Day</h2><p>Prepare before the release, watch XAU/USD react candle-by-candle, pause at the dangerous moments, identify confirmation and learn when doing nothing is the professional decision.</p><div class="lesson-meta"><span>XAU/USD</span><span>NFP</span><span>REPLAY</span><span>DECISION</span></div><button id="nfpStart" class="lesson-btn">ENTER NFP SCENARIO →</button></div></section>
+
+<section class="decision card"><div class="section-title compact"><div><span class="eyebrow">DECISION TRAINING</span><h2>What would you do?</h2></div><span class="decision-badge">GUIDED</span></div><div class="decision-context"><span id="decisionTag">CANDLE BASICS</span><p id="decisionQuestion">A bullish candle closes near its high. What should you inspect before deciding that buyers are in control?</p></div><div class="answers" id="answers"><button data-correct="true">The candles before it and the market context</button><button data-correct="false">Buy immediately because it is green</button><button data-correct="false">Ignore the wick and timeframe</button></div><div class="feedback" id="feedback"></div></section>
+
+<section class="progress card"><div class="section-title compact"><div><span class="eyebrow">YOUR RECORD</span><h2>Training progress</h2></div><strong id="xpText">0 / 100 XP</strong></div><div class="progress-track"><i id="xpBar"></i></div><div class="record-grid"><div><b id="lessonsDone">0</b><small>LESSONS</small></div><div><b id="decisionsDone">0</b><small>DECISIONS</small></div><div><b id="bestScore">0%</b><small>BEST SCORE</small></div></div></section>
+
+<section class="principles card"><span class="eyebrow">ASHFX CODE</span><h2>Professional habits first.</h2><div class="principle"><b>01</b><span>Protect capital before thinking about profit.</span></div><div class="principle"><b>02</b><span>No trade is better than a forced trade.</span></div><div class="principle"><b>03</b><span>A setup is a process, not a prediction.</span></div><div class="principle"><b>04</b><span>Every lesson ends with independent practice.</span></div></section>
+</main>
+<nav class="bottom-nav"><button class="active">⌂<small>School</small></button><button id="navLessons">◫<small>Lessons</small></button><button id="navPractice">◉<small>Practice</small></button><button>♙<small>Profile</small></button></nav>
+</div><script src="assets/js/app.js"></script></body></html>

@@ -13,19 +13,54 @@
       <div class="brand"><span class="brand-mark">A</span><div><strong>AshFX</strong><small>ONLINE SCHOOL</small></div></div>
       <div class="level-pill">LEVEL <b id="level">1</b></div>
     </header>
-
     <main>
       <section class="welcome card">
         <span class="eyebrow">FOREX TRAINING SIMULATOR</span>
         <h1>Learn the market by <span>playing it.</span></h1>
-        <p>Start with the smallest building block of a chart: the candle. Watch it form, pause it, and learn what every movement means.</p>
+        <p>Study real market movement, then practice what you learn in our candle-by-candle training.</p>
         <button class="primary" id="startBtn">START LEVEL 1 <span>→</span></button>
+      </section>
+
+      <section class="chart-card card live-market">
+        <div class="chart-head"><div><span class="eyebrow">LIVE MARKET</span><h2>Real EUR/USD candles</h2></div><span class="live-dot">● LIVE</span></div>
+        <div class="symbol-row"><b>EUR/USD</b><span>5M</span><i>MARKET DATA</i></div>
+        <div class="tradingview-widget-container live-chart">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/EURUSD/" rel="noopener nofollow" target="_blank">EUR/USD chart</a> by TradingView</div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+          {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "5",
+            "locale": "en",
+            "save_image": false,
+            "style": "1",
+            "symbol": "FX:EURUSD",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#07111f",
+            "gridColor": "rgba(36, 54, 72, 0.35)",
+            "watchlist": ["FX:EURUSD","FX:GBPUSD","FX:USDJPY","FX:USDCHF","FX:AUDUSD","FX:USDCAD"],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [],
+            "autosize": true
+          }
+          </script>
+        </div>
+        <div class="live-note">Real market chart for observation. Training decisions will remain in demo/replay mode.</div>
       </section>
 
       <section class="progress card">
         <div class="section-head"><div><span class="eyebrow">YOUR JOURNEY</span><h2>Trader training</h2></div><strong id="xpText">0 / 100 XP</strong></div>
         <div class="progress-track"><i id="xpBar"></i></div>
-        <div class="lesson-row"><span>01</span><div><b>How a candle is created</b><small>Open · High · Low · Close</small></div><em>LOCKED</em></div>
+        <div class="lesson-row"><span>01</span><div><b>How a candle is created</b><small>Open · High · Low · Close</small></div><em>READY</em></div>
         <div class="lesson-row muted"><span>02</span><div><b>Candle anatomy</b><small>Body · Wick · Direction</small></div><em>LOCKED</em></div>
       </section>
 
